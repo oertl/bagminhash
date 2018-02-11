@@ -1,0 +1,144 @@
+//##################################
+//# Copyright (C) 2018 Otmar Ertl. #
+//# All rights reserved.           #
+//##################################
+
+import java.security.MessageDigest
+
+ext {
+    paperDir = 'paper'
+    pythonDir = 'python'
+    cppDir = 'c++'
+    dataDir = 'data'
+}
+
+task buildPerformanceTestExecutable(type: Exec) {
+    workingDir cppDir
+    inputs.files "$cppDir/performance_test.cpp", "$cppDir/weighted_minwise_hashing.hpp","$cppDir/bitstream_random.hpp", "$cppDir/exponential_distribution.hpp"
+    outputs.files "$cppDir/performance_test.out"
+    standardOutput = new ByteArrayOutputStream()
+    commandLine 'g++','-O3','-DNDEBUG','-std=c++17','-Wall','performance_test.cpp','xxhash/libxxhash.a','-o','performance_test.out'
+    //commandLine 'clang++','-O3','-DNDEBUG','-std=c++17','-Wall','performance_test.cpp','xxhash/libxxhash.a','-o','performance_test.out'
+}
+
+task buildErrorTestExecutable(type: Exec) {
+    workingDir cppDir
+    inputs.files "$cppDir/error_test.cpp", "$cppDir/weighted_minwise_hashing.hpp","$cppDir/bitstream_random.hpp", "$cppDir/exponential_distribution.hpp","$cppDir/data_generation.hpp"
+    outputs.files "$cppDir/error_test.out"
+    standardOutput = new ByteArrayOutputStream()
+    commandLine 'g++','-O3','-std=c++17','-fopenmp','-Wall','error_test.cpp','xxhash/libxxhash.a','-o','error_test.out'
+    //commandLine 'clang++','-O3','-std=c++17','-fopenmp=libiomp5','-Wall','error_test.cpp','xxhash/libxxhash.a','-o','error_test.out'
+}
+
+def executeErrorTestOutput = "$dataDir/error_test.csv"
+task executeErrorTest (type: Exec) {
+    workingDir cppDir
+    inputs.files "$cppDir/error_test.out"
+    outputs.files executeErrorTestOutput
+    doFirst {
+        standardOutput = new FileOutputStream(executeErrorTestOutput)
+    }
+    commandLine './error_test.out'
+    dependsOn 'buildErrorTestExecutable'
+}
+
+def errorTableTxt = "$paperDir/error_table.txt"
+task makeErrorTable (type: Exec) {
+    workingDir pythonDir
+    inputs.files executeErrorTestOutput, "$pythonDir/error_table.py"
+    outputs.files errorTableTxt
+    doFirst {
+        standardOutput = new FileOutputStream(errorTableTxt)
+    }
+    commandLine 'python3', 'error_table.py'
+}
+
+def hashSizes = [256, 1024, 4096, 16384]
+def dataSizes = [1, 2, 5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 20000, 50000, 100000, 200000, 500000, 1000000, 2000000, 5000000, 10000000]
+def distributions = ["exponential_lambda_1"]
+
+def generateMD5(String s) {
+    MessageDigest digest = MessageDigest.getInstance("MD5")
+    digest.update(s.bytes)
+    new BigInteger(1, digest.digest()).longValue()
+}
+
+def performanceTestDatFiles = []
+def performanceTestTasks = []
+
+def speedFigFileNames = []
+def spaceFigFileNames = []
+
+for(hashSize in hashSizes) {
+    for(distribution in distributions) {
+        for(dataSize in dataSizes) {
+
+            def calculateIcws = (dataSize <= 10000)?1:0
+
+            def performanceTestTaskName = "doPerformanceTest_${hashSize}_${dataSize}_${distribution}"
+            def performanceTestDatFile = "$dataDir/performance_test_result_${hashSize}_${dataSize}_${distribution}.dat"
+            def seed = generateMD5(performanceTestTaskName)
+
+            task "$performanceTestTaskName" (type: Exec) {
+                workingDir cppDir
+                inputs.files "$cppDir/performance_test.out"
+                outputs.files performanceTestDatFile
+                doFirst {
+                    standardOutput = new FileOutputStream(performanceTestDatFile)
+                }
+                commandLine './performance_test.out', seed, hashSize, dataSize, distribution, calculateIcws
+                dependsOn 'buildPerformanceTestExecutable'
+            }
+
+            performanceTestDatFiles.add performanceTestDatFile
+            performanceTestTasks.add performanceTestTaskName
+        }
+
+        speedFigFileNames.add "$paperDir/" + "speed_chart_" + hashSize + "_" + distribution
+        spaceFigFileNames.add "$paperDir/" + "space_chart_" + hashSize + "_" + distribution
+    }
+}
+
+def svgSpeedFigureFiles = speedFigFileNames.collect {it + ".svg"}
+def pdfSpeedFigureFiles = speedFigFileNames.collect {it + ".pdf"}
+def svgSpaceFigureFiles = spaceFigFileNames.collect {it + ".svg"}
+def pdfSpaceFigureFiles = spaceFigFileNames.collect {it + ".pdf"}
+
+def svgFigureFiles = svgSpeedFigureFiles + svgSpaceFigureFiles
+def pdfFigureFiles = pdfSpeedFigureFiles + pdfSpaceFigureFiles
+def figFileNames = speedFigFileNames + spaceFigFileNames
+
+task makeSpeedTestFigures (type: Exec) {
+    workingDir pythonDir
+    inputs.files performanceTestDatFiles, "$pythonDir/speed_charts.py"
+    outputs.files svgSpeedFigureFiles
+    commandLine 'python3', 'speed_charts.py'
+}
+
+task makeSpaceTestFigures (type: Exec) {
+    workingDir pythonDir
+    inputs.files performanceTestDatFiles, "$pythonDir/space_charts.py"
+    outputs.files svgSpaceFigureFiles
+    commandLine 'python3', 'space_charts.py'
+}
+
+task pdfFigures {
+    inputs.files svgFigureFiles
+    outputs.files pdfFigureFiles
+
+    dependsOn 'makeSpeedTestFigures','makeSpaceTestFigures'
+
+    doLast {
+        figFileNames.each { figureName ->
+            exec {
+                commandLine 'inkscape', "${figureName}.svg", "--export-pdf=${figureName}.pdf"
+            }
+        }
+    }
+}
+
+task execute {
+    dependsOn 'executeErrorTest',performanceTestTasks
+    doLast {
+    }
+}
