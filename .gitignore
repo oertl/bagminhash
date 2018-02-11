@@ -1,0 +1,5 @@
+.gradle
+c++/error_test.out
+c++/performance_test.out
+c++/xxhash
+!c++/xxhash/README
