@@ -76,7 +76,7 @@ def drawChart(data, hashSize, distribution, title):
     leg.get_frame().set_linewidth(0.0)
     leg.get_frame().set_facecolor('none')
 
-    fig.savefig('../paper/space_chart_' + str(hashSize) + '_' + distribution + '.svg', format='svg', dpi=1200,bbox_inches='tight',pad_inches=0)
+    fig.savefig('../paper/space_chart_' + str(hashSize) + '_' + distribution + '.svg', format='svg', dpi=1200,bbox_inches='tight',pad_inches=0,metadata={'creationDate': None})
     plt.close(fig)
 
 distributions = {"exponential_lambda_1":r"$\text{Exponential}(\text{rate}=1)$"}
