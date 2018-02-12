@@ -166,11 +166,11 @@ public:
         return weightIdxMax > weightIdxMin + 1;
     }
 
-    bool partiallyCovered() const {
+    bool partiallyRelevant() const {
         return D::getBound(weightIdxMin + 1) <= weight;
     }
 
-    bool fullyCovered() const {
+    bool fullyRelevant() const {
         return boundMax <= weight;
     }
 
@@ -271,23 +271,23 @@ WeightedHashResult bag_min_hash_1(const std::vector<std::tuple<uint64_t,double>>
         std::unique_ptr<PoissonProcess<D,H>> p = std::make_unique<PoissonProcess<D,H>>(std::move(bitStream), w);
 
         p->next(m);
-        if (p->fullyCovered()) h.update(p->getIndex(), p->getPoint());
+        if (p->fullyRelevant()) h.update(p->getIndex(), p->getPoint());
 
         while(p->getPoint() <= h.max()) {
-            while(p->splittable() && p->partiallyCovered()) {
+            while(p->splittable() && p->partiallyRelevant()) {
 
                 std::unique_ptr<PoissonProcess<D,H>> pPrime = p->split();
 
-                if (p->fullyCovered()) h.update(p->getIndex(), p->getPoint());
+                if (p->fullyRelevant()) h.update(p->getIndex(), p->getPoint());
 
-                if (pPrime->partiallyCovered()) {
+                if (pPrime->partiallyRelevant()) {
                     pPrime->next(m);
-                    if (pPrime->fullyCovered()) h.update(pPrime->getIndex(), pPrime->getPoint());
+                    if (pPrime->fullyRelevant()) h.update(pPrime->getIndex(), pPrime->getPoint());
                     if (pPrime->getPoint() <= h.max()) pushHeap(pPrime, heap, result.maxSpace);
                 }
             }
 
-            if (p->fullyCovered()) {
+            if (p->fullyRelevant()) {
                 p->next(m);
                 h.update(p->getIndex(), p->getPoint());
                 if (p->getPoint() <= h.max()) pushHeap(p, heap, result.maxSpace);
@@ -331,23 +331,23 @@ WeightedHashResult bag_min_hash_2(const std::vector<std::tuple<uint64_t,double>>
         std::unique_ptr<PoissonProcess<D,H>> p = std::make_unique<PoissonProcess<D,H>>(std::move(bitStream), w);
 
         p->next(m);
-        if (p->fullyCovered()) h.update(p->getIndex(), p->getPoint());
+        if (p->fullyRelevant()) h.update(p->getIndex(), p->getPoint());
 
         while(p->getPoint() <= h.max()) {
-            while(p->splittable() && p->partiallyCovered() && !p->fullyCovered()) {
+            while(p->splittable() && p->partiallyRelevant() && !p->fullyRelevant()) {
 
                 std::unique_ptr<PoissonProcess<D,H>> pPrime = p->split();
 
-                if (p->fullyCovered()) h.update(p->getIndex(), p->getPoint());
+                if (p->fullyRelevant()) h.update(p->getIndex(), p->getPoint());
 
-                if (pPrime->partiallyCovered()) {
+                if (pPrime->partiallyRelevant()) {
                     pPrime->next(m);
-                    if (pPrime->fullyCovered()) h.update(pPrime->getIndex(), pPrime->getPoint());
+                    if (pPrime->fullyRelevant()) h.update(pPrime->getIndex(), pPrime->getPoint());
                     if (pPrime->getPoint() <= h.max()) pushHeap(pPrime, temp, result.maxSpace, tempHeapOffset);
                 }
             }
 
-            if (p->fullyCovered()) {
+            if (p->fullyRelevant()) {
                 assert(p->getPoint() <= h.max());
                 pushHeap(p, temp, result.maxSpace, tempHeapOffset);
                 break;
@@ -379,20 +379,20 @@ WeightedHashResult bag_min_hash_2(const std::vector<std::tuple<uint64_t,double>>
         std::unique_ptr<PoissonProcess<D,H>> p = popHeap(temp);
         if (p->getPoint() > h.max()) break;
 
-        while(p->splittable() && p->partiallyCovered()) {
+        while(p->splittable() && p->partiallyRelevant()) {
 
             std::unique_ptr<PoissonProcess<D,H>> pPrime = p->split();
 
-            if (p->fullyCovered()) h.update(p->getIndex(), p->getPoint());
+            if (p->fullyRelevant()) h.update(p->getIndex(), p->getPoint());
 
-            if (pPrime->partiallyCovered()) {
+            if (pPrime->partiallyRelevant()) {
                 pPrime->next(m);
-                if (pPrime->fullyCovered()) h.update(pPrime->getIndex(), pPrime->getPoint());
+                if (pPrime->fullyRelevant()) h.update(pPrime->getIndex(), pPrime->getPoint());
                 if (pPrime->getPoint() <= h.max()) pushHeap(pPrime, temp, result.maxSpace);
             }
         }
 
-        if (p->fullyCovered()) {
+        if (p->fullyRelevant()) {
             p->next(m);
             h.update(p->getIndex(), p->getPoint());
             if (p->getPoint() <= h.max()) pushHeap(p, temp, result.maxSpace);
