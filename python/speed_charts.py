@@ -3,6 +3,8 @@
 # All rights reserved.           #
 ##################################
 
+import matplotlib
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import csv
 import os
