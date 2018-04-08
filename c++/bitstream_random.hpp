@@ -95,9 +95,9 @@ class BitStream {
     static const uint32_t FNV_OFFSET;
     static const uint32_t FNV_PRIME;
 
-    const size_t dataSize;
+    size_t dataSize;
     std::unique_ptr<char[]> data;
-    const uint64_t seed;
+    uint64_t seed;
     uint64_t hashBits;
     uint8_t availableBits;
 
@@ -109,13 +109,11 @@ class BitStream {
         hashBits = R::calculateHash(data.get(), dataSize, seed);
     }
 public:
-    BitStream(BitStream<R>&& p) :
-        dataSize(p.dataSize),
-        data(std::move(p.data)),
-        seed(p.seed),
-        hashBits(p.hashBits),
-        availableBits(p.availableBits) {
-    }
+
+    BitStream(const BitStream& p) = delete;
+    BitStream& operator=(const BitStream&) = delete;
+    BitStream(BitStream&& p) = default;
+    BitStream& operator=(BitStream&&) = default;
 
     template<typename I>
     BitStream(const I& valueProvider, uint64_t _seed) : dataSize(valueProvider.size() +  sizeof(uint32_t)), data(new char[dataSize]), seed(_seed), hashBits(0), availableBits(0) {
