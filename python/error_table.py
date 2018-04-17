@@ -75,7 +75,8 @@ algorithmDescriptionIdx = 1
 numIterationsIdx = 2
 hashSizeIdx = 3
 trueJaccardIndexIdx = 4
-histogramDataIdx = 5
+zeroBitHashingSimilarityIdx = 5
+histogramDataIdx = 6
 
 assert(headers[caseDescriptionIdx] == "caseDescription")
 assert(headers[algorithmDescriptionIdx] == "algorithmDescription")
@@ -83,6 +84,7 @@ assert(headers[numIterationsIdx] == "numIterations")
 assert(headers[hashSizeIdx] == "hashSize")
 assert(headers[trueJaccardIndexIdx] == "trueJaccardIndex")
 assert(headers[histogramDataIdx] == "histogramEqualSignatureComponents")
+assert(headers[zeroBitHashingSimilarityIdx] == "zeroBitHashingSimilarity")
 
 def extractCaseDescriptions(data):
     result = []

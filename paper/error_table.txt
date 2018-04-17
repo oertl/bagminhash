@@ -886,7 +886,7 @@ N/A
 \numsci{ 7.21E+03}
 \\
 \midrule
-\multirowcell{4}[1em][l]{$\bigcup_{\symTestCaseIndex=0}^{1000} \lbrace({1.001}^\symTestCaseIndex, {1.001}^{-\symTestCaseIndex})\rbrace$ \\ $\symJaccard = \num[group-digits = false]{0.538308}$}
+\multirowcell{4}[1em][l]{$\bigcup_{\symTestCaseIndex=0}^{1000} \lbrace({1.001}^\symTestCaseIndex, {1.002}^{\symTestCaseIndex})\rbrace$ \\ $\symJaccard = \num[group-digits = false]{0.538308}$}
 & 4
 & \numsci{ 6.21E-02}
 &

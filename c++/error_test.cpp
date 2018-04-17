@@ -20,6 +20,7 @@ void testCase(const string& caseDescription, const Weights& w, const H& h, const
     auto dataSizes = w.getSize();
 
     double J = w.getJaccardIndex();
+    double zeroBitHashingSimilarity = w.getZeroBitHashingSimilarity();
 
     uint64_t seedSize = 256;
 
@@ -67,7 +68,8 @@ void testCase(const string& caseDescription, const Weights& w, const H& h, const
     cout << algorithmDescription << ";";
     cout << n << ";";
     cout << m << ";";
-    cout << J << endl;
+    cout << J << ";";
+    cout << zeroBitHashingSimilarity << endl;
     bool first = true;
     for(uint32_t x : numEquals) {
         if (!first) {
@@ -101,7 +103,8 @@ int main(int argc, char* argv[]) {
     cout << "algorithmDescription" << ";";
     cout << "numIterations" << ";";
     cout << "hashSize" << ";";
-    cout << "trueJaccardIndex";
+    cout << "trueJaccardIndex" << ";";
+    cout << "zeroBitHashingSimilarity";
     cout << endl;
     cout << "histogramEqualSignatureComponents";
     cout << endl;
