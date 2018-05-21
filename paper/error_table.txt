@@ -44,12 +44,12 @@ N/A
 &
 \numsci{ 8.10E-01}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 1.93E+03}
 &
 \numsci{ 1.00E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ -3.07E+01}
 &
 \numsci{ 2.25E-02}
@@ -77,12 +77,12 @@ N/A
 &
 \numsci{ 8.10E-01}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 9.39E+03}
 &
 \numsci{ 1.00E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 5.11E+01}
 &
 \numsci{ 5.67E-03}
@@ -110,12 +110,12 @@ N/A
 &
 \numsci{ 8.10E-01}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 3.99E+04}
 &
 \numsci{ 1.00E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 4.24E+02}
 &
 \numsci{ 1.41E-03}
@@ -143,12 +143,12 @@ N/A
 &
 \numsci{ 8.10E-01}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 1.62E+05}
 &
 \numsci{ 1.00E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 1.93E+03}
 &
 \numsci{ 3.59E-04}
@@ -176,12 +176,12 @@ N/A
 &
 \numsci{ 8.10E-01}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 6.51E+05}
 &
 \numsci{ 1.00E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 7.96E+03}
 &
 \numsci{ 8.95E-05}
@@ -191,6 +191,39 @@ N/A
 \numsci{ 8.56E-05}
 &
 \num{ -1.82}
+\\
+& 4096
+& \numsci{ 2.20E-05}
+&
+\numsci{ 2.26E-05}
+&
+\num{ 1.91}
+&
+N/A
+&
+N/A
+&
+\numsci{ 2.18E-05}
+&
+\num{ -0.44}
+&
+\numsci{ 8.10E-01}
+&
+\color{red}\bf
+\numsci{ 2.61E+06}
+&
+\numsci{ 1.00E-02}
+&
+\color{red}\bf
+\numsci{ 3.21E+04}
+&
+\numsci{ 2.18E-05}
+&
+\num{ -0.65}
+&
+\numsci{ 2.19E-05}
+&
+\num{ -0.09}
 \\
 \midrule
 \multirowcell{4}[1em][l]{$\lbrace(9,10)\rbrace$ \\ $\symJaccard = \num[group-digits = false]{0.9}$}
@@ -211,12 +244,12 @@ N/A
 &
 \numsci{ 1.00E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ -3.07E+01}
 &
 \numsci{ 8.10E-01}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 1.93E+03}
 &
 \numsci{ 2.25E-02}
@@ -244,12 +277,12 @@ N/A
 &
 \numsci{ 1.00E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 5.11E+01}
 &
 \numsci{ 8.10E-01}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 9.39E+03}
 &
 \numsci{ 5.66E-03}
@@ -277,12 +310,12 @@ N/A
 &
 \numsci{ 1.00E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 4.24E+02}
 &
 \numsci{ 8.10E-01}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 3.99E+04}
 &
 \numsci{ 1.38E-03}
@@ -310,12 +343,12 @@ N/A
 &
 \numsci{ 1.00E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 1.93E+03}
 &
 \numsci{ 8.10E-01}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 1.62E+05}
 &
 \numsci{ 3.54E-04}
@@ -343,12 +376,12 @@ N/A
 &
 \numsci{ 1.00E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 7.96E+03}
 &
 \numsci{ 8.10E-01}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 6.51E+05}
 &
 \numsci{ 9.02E-05}
@@ -358,6 +391,39 @@ N/A
 \numsci{ 8.79E-05}
 &
 \num{ -0.02}
+\\
+& 4096
+& \numsci{ 2.20E-05}
+&
+\numsci{ 2.20E-05}
+&
+\num{ 0.11}
+&
+N/A
+&
+N/A
+&
+\numsci{ 2.16E-05}
+&
+\num{ -1.13}
+&
+\numsci{ 1.00E-02}
+&
+\color{red}\bf
+\numsci{ 3.21E+04}
+&
+\numsci{ 8.10E-01}
+&
+\color{red}\bf
+\numsci{ 2.61E+06}
+&
+\numsci{ 2.20E-05}
+&
+\num{ 0.24}
+&
+\numsci{ 2.18E-05}
+&
+\num{ -0.66}
 \\
 \midrule
 \multirowcell{4}[1em][l]{$\lbrace(3,20),(30,7)\rbrace$ \\ $\symJaccard = \num[group-digits = false]{0.2}$}
@@ -378,7 +444,7 @@ N/A
 &
 \numsci{ 8.04E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 7.04E+01}
 &
 \numsci{ 4.00E-02}
@@ -387,12 +453,12 @@ N/A
 &
 \numsci{ 3.45E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \num{ -9.50}
 &
 \numsci{ 3.32E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ -1.18E+01}
 \\
 & 16
@@ -412,22 +478,22 @@ N/A
 &
 \numsci{ 3.73E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 1.92E+02}
 &
 \numsci{ 4.00E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 2.11E+02}
 &
 \numsci{ 1.09E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \num{ 6.48}
 &
 \numsci{ 2.00E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 7.05E+01}
 \\
 & 64
@@ -447,22 +513,22 @@ N/A
 &
 \numsci{ 2.63E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 6.72E+02}
 &
 \numsci{ 4.00E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 1.06E+03}
 &
 \numsci{ 4.87E-03}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 6.69E+01}
 &
 \numsci{ 1.69E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 4.07E+02}
 \\
 & 256
@@ -482,22 +548,22 @@ N/A
 &
 \numsci{ 2.35E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 2.59E+03}
 &
 \numsci{ 4.00E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 4.45E+03}
 &
 \numsci{ 3.47E-03}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 3.22E+02}
 &
 \numsci{ 1.62E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 1.76E+03}
 \\
 & 1024
@@ -517,23 +583,58 @@ N/A
 &
 \numsci{ 2.28E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 1.02E+04}
 &
 \numsci{ 4.00E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 1.80E+04}
 &
 \numsci{ 3.08E-03}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 1.32E+03}
 &
 \numsci{ 1.59E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 7.13E+03}
+\\
+& 4096
+& \numsci{ 3.91E-05}
+&
+\numsci{ 3.87E-05}
+&
+\num{ -0.60}
+&
+N/A
+&
+N/A
+&
+\numsci{ 3.89E-05}
+&
+\num{ -0.35}
+&
+\numsci{ 2.26E-02}
+&
+\color{red}\bf
+\numsci{ 4.08E+04}
+&
+\numsci{ 4.00E-02}
+&
+\color{red}\bf
+\numsci{ 7.23E+04}
+&
+\numsci{ 2.99E-03}
+&
+\color{red}\bf
+\numsci{ 5.34E+03}
+&
+\numsci{ 1.59E-02}
+&
+\color{red}\bf
+\numsci{ 2.87E+04}
 \\
 \midrule
 \multirowcell{4}[1em][l]{$\lbrace(0,2),(3,4),(6,3),(2,4)\rbrace$ \\ $\symJaccard = \num[group-digits = false]{0.5}$}
@@ -554,22 +655,22 @@ N/A
 &
 \numsci{ 6.82E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \num{ 7.47}
 &
 \numsci{ 2.50E-01}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 2.45E+02}
 &
 \numsci{ 6.74E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \num{ 6.34}
 &
 \numsci{ 8.17E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 2.51E+01}
 \\
 & 16
@@ -589,22 +690,22 @@ N/A
 &
 \numsci{ 2.19E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 2.96E+01}
 &
 \numsci{ 2.50E-01}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 1.10E+03}
 &
 \numsci{ 2.09E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 2.47E+01}
 &
 \numsci{ 3.86E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 1.07E+02}
 \\
 & 64
@@ -624,22 +725,22 @@ N/A
 &
 \numsci{ 1.10E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 1.29E+02}
 &
 \numsci{ 2.50E-01}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 4.49E+03}
 &
 \numsci{ 8.76E-03}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 8.86E+01}
 &
 \numsci{ 2.78E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 4.37E+02}
 \\
 & 256
@@ -659,22 +760,22 @@ N/A
 &
 \numsci{ 8.12E-03}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 5.19E+02}
 &
 \numsci{ 2.50E-01}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 1.81E+04}
 &
 \numsci{ 5.91E-03}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 3.58E+02}
 &
 \numsci{ 2.53E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 1.76E+03}
 \\
 & 1024
@@ -694,23 +795,58 @@ N/A
 &
 \numsci{ 7.51E-03}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 2.11E+03}
 &
 \numsci{ 2.50E-01}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 7.24E+04}
 &
 \numsci{ 5.25E-03}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 1.45E+03}
 &
 \numsci{ 2.46E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 7.05E+03}
+\\
+& 4096
+& \numsci{ 6.10E-05}
+&
+\numsci{ 6.18E-05}
+&
+\num{ 0.91}
+&
+N/A
+&
+N/A
+&
+\numsci{ 6.06E-05}
+&
+\num{ -0.55}
+&
+\numsci{ 7.33E-03}
+&
+\color{red}\bf
+\numsci{ 8.42E+03}
+&
+\numsci{ 2.50E-01}
+&
+\color{red}\bf
+\numsci{ 2.90E+05}
+&
+\numsci{ 5.09E-03}
+&
+\color{red}\bf
+\numsci{ 5.83E+03}
+&
+\numsci{ 2.44E-02}
+&
+\color{red}\bf
+\numsci{ 2.82E+04}
 \\
 \midrule
 \multirowcell{4}[1em][l]{$\lbrace(4,2)^{15},(1,4)^{10},(12,0)^{5}\rbrace$ \\ $\symJaccard = \num[group-digits = false]{0.25}$}
@@ -735,17 +871,17 @@ N/A
 &
 \numsci{ 6.25E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 2.46E+01}
 &
 \numsci{ 4.30E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \num{ -6.10}
 &
 \numsci{ 4.40E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \num{ -4.52}
 \\
 & 16
@@ -769,7 +905,7 @@ N/A
 &
 \numsci{ 6.25E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 3.10E+02}
 &
 \numsci{ 1.18E-02}
@@ -778,7 +914,7 @@ N/A
 &
 \numsci{ 2.54E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 8.36E+01}
 \\
 & 64
@@ -802,17 +938,17 @@ N/A
 &
 \numsci{ 6.25E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 1.44E+03}
 &
 \numsci{ 4.55E-03}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 3.92E+01}
 &
 \numsci{ 2.04E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 4.24E+02}
 \\
 & 256
@@ -832,22 +968,22 @@ N/A
 &
 \numsci{ 8.08E-04}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \num{ 7.33}
 &
 \numsci{ 6.25E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 5.97E+03}
 &
 \numsci{ 2.63E-03}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 1.84E+02}
 &
 \numsci{ 1.92E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 1.78E+03}
 \\
 & 1024
@@ -867,23 +1003,58 @@ N/A
 &
 \numsci{ 2.53E-04}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 2.69E+01}
 &
 \numsci{ 6.25E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 2.41E+04}
 &
 \numsci{ 2.13E-03}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 7.52E+02}
 &
 \numsci{ 1.89E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 7.21E+03}
+\\
+& 4096
+& \numsci{ 4.58E-05}
+&
+\numsci{ 4.53E-05}
+&
+\num{ -0.68}
+&
+N/A
+&
+N/A
+&
+\numsci{ 4.52E-05}
+&
+\num{ -0.90}
+&
+\numsci{ 1.15E-04}
+&
+\color{red}\bf
+\numsci{ 1.08E+02}
+&
+\numsci{ 6.25E-02}
+&
+\color{red}\bf
+\numsci{ 9.65E+04}
+&
+\numsci{ 1.99E-03}
+&
+\color{red}\bf
+\numsci{ 3.01E+03}
+&
+\numsci{ 1.88E-02}
+&
+\color{red}\bf
+\numsci{ 2.89E+04}
 \\
 \midrule
 \multirowcell{4}[1em][l]{$\bigcup_{\symTestCaseIndex=0}^{1000} \lbrace({1.001}^\symTestCaseIndex, {1.002}^{\symTestCaseIndex})\rbrace$ \\ $\symJaccard = \num[group-digits = false]{0.538308}$}
@@ -908,17 +1079,17 @@ N/A
 &
 \numsci{ 2.84E-01}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 2.90E+02}
 &
 \numsci{ 6.75E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \num{ 6.99}
 &
 \numsci{ 1.02E-01}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 5.28E+01}
 \\
 & 16
@@ -942,17 +1113,17 @@ N/A
 &
 \numsci{ 2.82E-01}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 1.25E+03}
 &
 \numsci{ 1.98E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 2.03E+01}
 &
 \numsci{ 5.99E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 2.09E+02}
 \\
 & 64
@@ -976,17 +1147,17 @@ N/A
 &
 \numsci{ 2.81E-01}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 5.09E+03}
 &
 \numsci{ 7.93E-03}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 7.42E+01}
 &
 \numsci{ 4.97E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 8.41E+02}
 \\
 & 256
@@ -1010,17 +1181,17 @@ N/A
 &
 \numsci{ 2.81E-01}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 2.04E+04}
 &
 \numsci{ 4.96E-03}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 2.91E+02}
 &
 \numsci{ 4.72E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 3.37E+03}
 \\
 & 1024
@@ -1044,18 +1215,52 @@ N/A
 &
 \numsci{ 2.81E-01}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 8.19E+04}
 &
 \numsci{ 4.31E-03}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 1.19E+03}
 &
 \numsci{ 4.67E-02}
 &
-\leavevmode\color{red}\bf
+\color{red}\bf
 \numsci{ 1.35E+04}
+\\
+& 4096
+& \numsci{ 6.07E-05}
+&
+\numsci{ 6.09E-05}
+&
+\num{ 0.30}
+&
+N/A
+&
+N/A
+&
+\numsci{ 6.10E-05}
+&
+\num{ 0.43}
+&
+\numsci{ 6.10E-05}
+&
+\num{ 0.36}
+&
+\numsci{ 2.81E-01}
+&
+\color{red}\bf
+\numsci{ 3.28E+05}
+&
+\numsci{ 4.12E-03}
+&
+\color{red}\bf
+\numsci{ 4.74E+03}
+&
+\numsci{ 4.66E-02}
+&
+\color{red}\bf
+\numsci{ 5.42E+04}
 \\
 \midrule
 \multirowcell{4}[1em][l]{$\lbrace(0,1),(1,0),(1,1)\rbrace$ \\ $\symJaccard = \num[group-digits = false]{0.333333}$}
@@ -1214,6 +1419,37 @@ N/A
 &
 \num{ -0.54}
 \\
+& 4096
+& \numsci{ 5.43E-05}
+&
+\numsci{ 5.50E-05}
+&
+\num{ 0.98}
+&
+\numsci{ 5.36E-05}
+&
+\num{ -0.80}
+&
+\numsci{ 5.44E-05}
+&
+\num{ 0.21}
+&
+\numsci{ 5.43E-05}
+&
+\num{ 0.08}
+&
+\numsci{ 5.52E-05}
+&
+\num{ 1.27}
+&
+\numsci{ 5.39E-05}
+&
+\num{ -0.44}
+&
+\numsci{ 5.43E-05}
+&
+\num{ 0.02}
+\\
 \midrule
 \multirowcell{4}[1em][l]{$\lbrace(0,1)^{30},(1,0)^{10},(1,1)^{160}\rbrace$ \\ $\symJaccard = \num[group-digits = false]{0.8}$}
 & 4
@@ -1371,6 +1607,37 @@ N/A
 &
 \num{ 0.24}
 \\
+& 4096
+& \numsci{ 3.91E-05}
+&
+\numsci{ 3.94E-05}
+&
+\num{ 0.66}
+&
+\numsci{ 3.85E-05}
+&
+\num{ -0.98}
+&
+\numsci{ 3.89E-05}
+&
+\num{ -0.25}
+&
+\numsci{ 3.95E-05}
+&
+\num{ 0.86}
+&
+\numsci{ 3.93E-05}
+&
+\num{ 0.43}
+&
+\numsci{ 3.92E-05}
+&
+\num{ 0.27}
+&
+\numsci{ 3.82E-05}
+&
+\num{ -1.53}
+\\
 \midrule
 \multirowcell{4}[1em][l]{$\lbrace(0,1)^{300},(1,0)^{500},(1,1)^{1200}\rbrace$ \\ $\symJaccard = \num[group-digits = false]{0.6}$}
 & 4
@@ -1527,6 +1794,37 @@ N/A
 \numsci{ 2.33E-04}
 &
 \num{ -0.35}
+\\
+& 4096
+& \numsci{ 5.86E-05}
+&
+\numsci{ 5.76E-05}
+&
+\num{ -1.24}
+&
+\numsci{ 5.93E-05}
+&
+\num{ 0.81}
+&
+\numsci{ 5.89E-05}
+&
+\num{ 0.41}
+&
+\numsci{ 5.78E-05}
+&
+\num{ -0.99}
+&
+\numsci{ 5.89E-05}
+&
+\num{ 0.32}
+&
+\numsci{ 5.76E-05}
+&
+\num{ -1.25}
+&
+\numsci{ 5.95E-05}
+&
+\num{ 1.12}
 \\
 \bottomrule
 \end{tabular}

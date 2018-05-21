@@ -28,32 +28,6 @@ public:
         return n/d;
     }
 
-    double getZeroBitHashingSimilarity() const {
-        double d = 0;
-        double n = 0;
-		double sumW0 = 0;
-		double sumW1 = 0;
-        for (const auto& w : weights) {
-			sumW0 += std::get<0>(w);
-			sumW1 += std::get<1>(w);
-		}
-        for (const auto& w : weights) {			
-			double w0 = std::get<0>(w);
-			double w1 = std::get<1>(w);
-			if (w0 > w1) {
-				d += w0;
-				n += w1;
-				n += (w0 - w1) * (w1 / sumW1);
-			}
-			else {
-				d += w1;
-				n += w0;
-				n += (w1 - w0) * (w0 / sumW0);
-			}
-        }
-        return n / d;
-    }
-
     std::tuple<size_t, size_t> getSize() const {
         size_t sizeA = 0;
         size_t sizeB = 0;

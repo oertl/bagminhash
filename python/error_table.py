@@ -75,8 +75,7 @@ algorithmDescriptionIdx = 1
 numIterationsIdx = 2
 hashSizeIdx = 3
 trueJaccardIndexIdx = 4
-zeroBitHashingSimilarityIdx = 5
-histogramDataIdx = 6
+histogramDataIdx = 5
 
 assert(headers[caseDescriptionIdx] == "caseDescription")
 assert(headers[algorithmDescriptionIdx] == "algorithmDescription")
@@ -84,7 +83,6 @@ assert(headers[numIterationsIdx] == "numIterations")
 assert(headers[hashSizeIdx] == "hashSize")
 assert(headers[trueJaccardIndexIdx] == "trueJaccardIndex")
 assert(headers[histogramDataIdx] == "histogramEqualSignatureComponents")
-assert(headers[zeroBitHashingSimilarityIdx] == "zeroBitHashingSimilarity")
 
 def extractCaseDescriptions(data):
     result = []
@@ -132,7 +130,7 @@ def calculateZScore(empiricalMSE, J, c, m):
 
 case_descriptions = extractCaseDescriptions(data)
 
-m_values = [4, 16, 64, 256, 1024]
+m_values = [4, 16, 64, 256, 1024, 4096]
 
 algorithms = [
     "BagMinHash (float)",
@@ -202,7 +200,7 @@ for case_description in case_descriptions:
             print("&")
             if not isnan(z):
                 if (abs(z) >= redLimit):
-                    print("\\leavevmode\\color{red}\\bf")
+                    print("\\color{red}\\bf")
                     if (abs(z) >= 10):
                         print("\\numsci{" + ' {:.2E}'.format(z) + "}")
                     else:
