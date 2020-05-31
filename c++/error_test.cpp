@@ -11,6 +11,7 @@
 #include <iomanip>
 
 using namespace std;
+using namespace bmh;
 
 typedef XXHash64 hash_algorithm;
 

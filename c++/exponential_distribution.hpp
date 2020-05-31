@@ -45,6 +45,8 @@
 
 #include <cmath>
 
+namespace bmh {
+
 namespace ziggurat {
 
 // tables for the ziggurat algorithm
@@ -232,5 +234,7 @@ template<typename T> double getExponential(T& bitstream) {
 }
 
 } // namespace ziggurat
+
+} // namespace bmh
 
 #endif // _EXPONENTIAL_DISTRIBUTION_HPP_

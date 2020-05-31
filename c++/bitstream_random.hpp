@@ -15,6 +15,8 @@
 #include <cstring>
 #include <memory>
 
+namespace bmh {
+
 static constexpr double maxReciprocal = 1. / (UINT64_C(1) << 52);
 
 // uniform distributed double value from (0, 1]
@@ -153,5 +155,7 @@ public:
 // see https://en.wikipedia.org/wiki/Fowler-Noll-Vo_hash_function
 template<typename R> const uint32_t BitStream<R>:: FNV_OFFSET = 0x811c9dc5;
 template<typename R> const uint32_t BitStream<R>:: FNV_PRIME = (1 << 24) + (1 << 8) + 0x93;
+
+} // namespace bmh
 
 #endif // _BIT_STREAM_RANDOM_HPP_

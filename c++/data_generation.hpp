@@ -12,6 +12,8 @@
 #include <tuple>
 #include <algorithm>
 
+namespace bmh {
+
 class Weights {
 
     const std::vector<std::tuple<double, double>> weights;
@@ -166,5 +168,7 @@ Weights getWeightsCase9() {
     }
     return Weights(v, "$\\lbrace(0,1)^{300},(1,0)^{500},(1,1)^{1200}\\rbrace$");
 }
+
+} // namespace bmh
 
 #endif // _DATA_GENERATION_HPP_

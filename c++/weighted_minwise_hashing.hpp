@@ -12,6 +12,8 @@
 #include <algorithm>
 #include <functional>
 
+namespace bmh {
+
 template <typename T>
 class MaxValueTracker {
     const uint32_t m;
@@ -644,5 +646,7 @@ WeightedHashResult zero_bit_consistent_weighted_sampling(const std::vector<std::
 
     return result;
 }
+
+} // namespace bmh
 
 #endif // _WEIGHTED_MINWISE_HASHING_HPP_
