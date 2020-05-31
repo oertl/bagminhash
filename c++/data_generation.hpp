@@ -3,8 +3,8 @@
 //# All rights reserved.           #
 //##################################
 
-#ifndef _DATA_GENERATION_HPP_
-#define _DATA_GENERATION_HPP_
+#ifndef _BMH_DATA_GENERATION_HPP_
+#define _BMH_DATA_GENERATION_HPP_
 
 #include <vector>
 #include <string>
@@ -171,4 +171,4 @@ Weights getWeightsCase9() {
 
 } // namespace bmh
 
-#endif // _DATA_GENERATION_HPP_
+#endif // _BMH_DATA_GENERATION_HPP_

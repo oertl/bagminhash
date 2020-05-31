@@ -3,8 +3,8 @@
 //# All rights reserved.           #
 //##################################
 
-#ifndef _BIT_STREAM_RANDOM_HPP_
-#define _BIT_STREAM_RANDOM_HPP_
+#ifndef _BMH_BIT_STREAM_RANDOM_HPP_
+#define _BMH_BIT_STREAM_RANDOM_HPP_
 
 #include "exponential_distribution.hpp"
 
@@ -158,4 +158,4 @@ template<typename R> const uint32_t BitStream<R>:: FNV_PRIME = (1 << 24) + (1 <<
 
 } // namespace bmh
 
-#endif // _BIT_STREAM_RANDOM_HPP_
+#endif // _BMH_BIT_STREAM_RANDOM_HPP_

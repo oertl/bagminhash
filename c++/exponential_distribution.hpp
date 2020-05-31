@@ -40,8 +40,8 @@
  *  2001-02-18  moved to individual header files
  */
 
-#ifndef _EXPONENTIAL_DISTRIBUTION_HPP_
-#define _EXPONENTIAL_DISTRIBUTION_HPP_
+#ifndef _BMH_EXPONENTIAL_DISTRIBUTION_HPP_
+#define _BMH_EXPONENTIAL_DISTRIBUTION_HPP_
 
 #include <cmath>
 
@@ -237,4 +237,4 @@ template<typename T> double getExponential(T& bitstream) {
 
 } // namespace bmh
 
-#endif // _EXPONENTIAL_DISTRIBUTION_HPP_
+#endif // _BMH_EXPONENTIAL_DISTRIBUTION_HPP_
