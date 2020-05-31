@@ -41,10 +41,10 @@ void testCase(const string& caseDescription, const Weights& w, const H& h, const
         seed_seq seedSequence(seeds.begin() + i * seedSize, seeds.begin() + (i + 1) * seedSize);
         mt19937_64 rng(seedSequence);
 
-        const tuple<vector<tuple<uint64_t, double>>,vector<tuple<uint64_t, double>>> data = generateData(rng, w);
+        const tuple<vector<pair<uint64_t, double>>,vector<pair<uint64_t, double>>> data = generateData(rng, w);
 
-        const vector<tuple<uint64_t, double>>& d1 = get<0>(data);
-        const vector<tuple<uint64_t, double>>& d2 = get<1>(data);
+        const vector<pair<uint64_t, double>>& d1 = get<0>(data);
+        const vector<pair<uint64_t, double>>& d2 = get<1>(data);
 
         assert(get<0>(dataSizes) == d1.size());
         assert(get<1>(dataSizes) == d2.size());

@@ -16,7 +16,7 @@ using namespace bmh;
 typedef XXHash64 hash_algorithm;
 
 template<typename H>
-void testCase(uint64_t dataSize, uint32_t hashSize, uint64_t numCycles, const vector<vector<tuple<uint64_t, double>>>& testData, const H& h, const string& distributionLabel, const string& algorithmLabel) {
+void testCase(uint64_t dataSize, uint32_t hashSize, uint64_t numCycles, const vector<vector<pair<uint64_t, double>>>& testData, const H& h, const string& distributionLabel, const string& algorithmLabel) {
 
     chrono::steady_clock::time_point tStart = chrono::steady_clock::now();
     uint64_t sumMaxSpace = 0;
@@ -45,15 +45,15 @@ void testCase(uint64_t dataSize, uint32_t hashSize, uint64_t numCycles, const ve
 template <typename DIST, typename GEN> void testDistribution(DIST& dist, GEN& rng, const string& distributionLabel, uint32_t hashSize, uint64_t dataSize, uint64_t numCycles, bool calculateIcws) {
 
     // generate test data
-    vector<vector<tuple<uint64_t, double>>> testData(numCycles);
+    vector<vector<pair<uint64_t, double>>> testData(numCycles);
     for (uint64_t i = 0; i < numCycles; ++i) {
 
-        vector<tuple<uint64_t, double>> d(dataSize);
+        vector<pair<uint64_t, double>> d(dataSize);
         for (uint64_t j = 0; j < dataSize; ++j) {
             uint64_t data = rng();
             double weight = dist(rng);
             assert(weight <= numeric_limits<float>::max());
-            d[j] = make_tuple(data, weight);
+            d[j] = make_pair(data, weight);
         }
         testData[i] = d;
     }

@@ -252,7 +252,7 @@ static const uint64_t bagMinHashSeedA = UINT64_C(0xf331e07615a87fd7); // constan
 static const uint64_t bagMinHashSeedB = UINT64_C(0xe224afad0d89c684); // constant from random.org
 
 template<typename D, typename H>
-WeightedHashResult bag_min_hash_1(const std::vector<std::tuple<uint64_t,double>>& data, const uint32_t m) {
+WeightedHashResult bag_min_hash_1(const std::vector<std::pair<uint64_t,double>>& data, const uint32_t m) {
     assert(D::getBound(0) == 0);
 
     const uint8_t b = 64; // constant for b-bit minwise hashing
@@ -310,7 +310,7 @@ WeightedHashResult bag_min_hash_1(const std::vector<std::tuple<uint64_t,double>>
 }
 
 template<typename D, typename H>
-WeightedHashResult bag_min_hash_2(const std::vector<std::tuple<uint64_t,double>>& data, const uint32_t m) {
+WeightedHashResult bag_min_hash_2(const std::vector<std::pair<uint64_t,double>>& data, const uint32_t m) {
     assert(D::getBound(0) == 0);
 
     const uint8_t b = 64; // constant for b-bit minwise hashing
@@ -411,7 +411,7 @@ WeightedHashResult bag_min_hash_2(const std::vector<std::tuple<uint64_t,double>>
 
 // see Ioffe, Sergey. "Improved consistent sampling, weighted minhash and l1 sketching." Data Mining (ICDM), 2010 IEEE 10th International Conference on. IEEE, 2010.
 template <typename H>
-WeightedHashResult improved_consistent_weighted_hashing(const std::vector<std::tuple<uint64_t,double>>& data, const uint32_t m) {
+WeightedHashResult improved_consistent_weighted_hashing(const std::vector<std::pair<uint64_t,double>>& data, const uint32_t m) {
     const uint8_t b = 64; // constant for b-bit minwise hashing
 
     std::vector<double> aVec(m, std::numeric_limits<double>::infinity());
@@ -459,7 +459,7 @@ WeightedHashResult improved_consistent_weighted_hashing(const std::vector<std::t
 
 // see Wu, Wei, et al. "Canonical Consistent Weighted Sampling for Real-Value Weighted Min-Hash." Data Mining (ICDM), 2016 IEEE 16th International Conference on. IEEE, 2016.
 template <typename H>
-WeightedHashResult canonical_consistent_weighted_hashing(const std::vector<std::tuple<uint64_t,double>>& data, const uint32_t m) {
+WeightedHashResult canonical_consistent_weighted_hashing(const std::vector<std::pair<uint64_t,double>>& data, const uint32_t m) {
     const uint8_t b = 64; // constant for b-bit minwise hashing
 
     std::vector<double> aVec(m, std::numeric_limits<double>::infinity());
@@ -505,7 +505,7 @@ WeightedHashResult canonical_consistent_weighted_hashing(const std::vector<std::
 
 // see Wu, Wei, et al. "Consistent Weighted Sampling Made More Practical." Proceedings of the 26th International Conference on World Wide Web. International World Wide Web Conferences Steering Committee, 2017.
 template <typename H>
-WeightedHashResult practical_consistent_weighted_hashing(const std::vector<std::tuple<uint64_t,double>>& data, const uint32_t m) {
+WeightedHashResult practical_consistent_weighted_hashing(const std::vector<std::pair<uint64_t,double>>& data, const uint32_t m) {
     const uint8_t b = 64; // constant for b-bit minwise hashing
 
     std::vector<double> aVec(m, std::numeric_limits<double>::infinity());
@@ -555,7 +555,7 @@ WeightedHashResult practical_consistent_weighted_hashing(const std::vector<std::
 
 // see Wu, Wei, et al. "Improved Consistent Weighted Sampling Revisited." arXiv preprint arXiv:1706.01172 (2017).
 template <typename H>
-WeightedHashResult improved_squared_consistent_weighted_hashing(const std::vector<std::tuple<uint64_t,double>>& data, const uint32_t m) {
+WeightedHashResult improved_squared_consistent_weighted_hashing(const std::vector<std::pair<uint64_t,double>>& data, const uint32_t m) {
     const uint8_t b = 64; // constant for b-bit minwise hashing
 
     std::vector<double> aVec(m, std::numeric_limits<double>::infinity());
@@ -607,7 +607,7 @@ WeightedHashResult improved_squared_consistent_weighted_hashing(const std::vecto
 
 // see Li, Ping. "0-bit consistent weighted sampling." Proceedings of the 21th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining. ACM, 2015.
 template <typename H>
-WeightedHashResult zero_bit_consistent_weighted_sampling(const std::vector<std::tuple<uint64_t,double>>& data, const uint32_t m) {
+WeightedHashResult zero_bit_consistent_weighted_sampling(const std::vector<std::pair<uint64_t,double>>& data, const uint32_t m) {
 
     std::vector<double> aVec(m, std::numeric_limits<double>::infinity());
     std::vector<uint64_t> dVec(m);

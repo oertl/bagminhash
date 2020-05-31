@@ -60,12 +60,12 @@ public:
     Weights(const std::vector<std::tuple<double, double>>& w, const std::string& d) : weights(w), latexDescription(d) {}
 };
 
-std::tuple<std::vector<std::tuple<uint64_t, double>>, std::vector<std::tuple<uint64_t, double>>> generateData(std::mt19937_64& rng, const Weights& w) {
+std::tuple<std::vector<std::pair<uint64_t, double>>, std::vector<std::pair<uint64_t, double>>> generateData(std::mt19937_64& rng, const Weights& w) {
 
     const auto& resultSizes = w.getSize();
 
-    std::vector<std::tuple<uint64_t, double>> valuesA;
-    std::vector<std::tuple<uint64_t, double>> valuesB;
+    std::vector<std::pair<uint64_t, double>> valuesA;
+    std::vector<std::pair<uint64_t, double>> valuesB;
 
     valuesA.reserve(std::get<0>(resultSizes));
     valuesB.reserve(std::get<1>(resultSizes));
